@@ -31,7 +31,12 @@
 # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    new_string = ""
+    for char in string:
+        new_string += char * 3          #need to figure out why it is not doing it for the second characters
+    return new_string
+
+print(one("The"))
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -78,7 +83,16 @@ print(two(8))
 
 
 def three(a):
-    return 1
+    num1 = a
+    num2 = a,a
+    return (num2)
+
+print(three(2))
+
+
+
+    
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -110,7 +124,12 @@ def three(a):
 
 
 def four(string1, string2):
-    return ""
+    x = list(string1)
+    y = list(string2)
+    return "".join(i for j in zip(x,y) for i in j)
+
+print(four("String", "Fridge"))
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -128,9 +147,16 @@ def four(string1, string2):
     # There is a module which can be used to generate random numbers, this module is called random.
     # The random module contains a function called randint.
 
+# from math import random 
+# from random import randint
+        
+# list = []                                               #I know this doesn't work but I can't see why
+    
+# for i in range(0,5):
+#     x = random.randint(100,200)
+#     list.append(x)
 
-def five():
-    return []
+# print(list)     
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -152,8 +178,12 @@ def five():
 
 
 def six(string):
-    return False
+    if string.endswith("py"):
+        return True
+    else:
+        return False
 
+print(six("pyiscool"))
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
     # <QUESTION 7>
@@ -179,7 +209,12 @@ def six(string):
 
 
 def seven(a, b, c):
-    return False
+    num_list = [a, b, c]
+    sorted_list = num_list.sort()
+    return sorted_list
+
+print(seven(4,6,2))
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
