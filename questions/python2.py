@@ -33,10 +33,8 @@
 def one(string):
     new_string = ""
     for char in string:
-        new_string += char * 3          #need to figure out why it is not doing it for the second characters
+        new_string += char * 3          
     return new_string
-
-print(one("The"))
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -62,7 +60,6 @@ def two(number):
     else:
         return False
 
-print(two(8))
  
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -81,17 +78,10 @@ print(two(8))
     # <HINT>
     # What happens if you multiply a string by a number?
 
+# def three(a):
+ 
 
-def three(a):
-    num1 = a
-    num2 = a,a
-    return (num2)
-
-print(three(2))
-
-
-
-    
+ 
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -127,8 +117,6 @@ def four(string1, string2):
     x = list(string1)
     y = list(string2)
     return "".join(i for j in zip(x,y) for i in j)
-
-print(four("String", "Fridge"))
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -183,7 +171,6 @@ def six(string):
     else:
         return False
 
-print(six("pyiscool"))
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
     # <QUESTION 7>
@@ -207,13 +194,16 @@ print(six("pyiscool"))
     # There is a function for lists called sort.
     # Use the cli to access the documentation help(list.sort)
 
-
-def seven(a, b, c):
-    num_list = [a, b, c]
-    sorted_list = num_list.sort()
-    return sorted_list
+def seven(a,b,c):
+    list = sorted([a, b, c])
+    if list[2] - list [1] == list[1] - list[0]:
+        return True
+    else:
+        return False
 
 print(seven(4,6,2))
+
+
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
